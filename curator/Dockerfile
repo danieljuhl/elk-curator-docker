@@ -10,7 +10,7 @@ RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
 RUN python get-pip.py
 
 # Install curator (https://www.elastic.co/guide/en/elasticsearch/client/curator/4.2/installation.html)
-RUN pip install elasticsearch-curator
+RUN pip install -U elasticsearch-curator==5.5
 
 # download go-cron
 RUN curl -L -o /usr/local/bin/go-cron-linux.gz https://github.com/odise/go-cron/releases/download/v0.0.7/go-cron-linux.gz
